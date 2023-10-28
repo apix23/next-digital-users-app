@@ -1,13 +1,7 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import {  useFetch } from "./useFetch";
 
+const USER_URL = "https://jsonplaceholder.typicode.com/users/"
 export const useUsers = () => {
-    const [users, setUser] = useState([]);
-    useEffect(() => {
-      fetch("https://jsonplaceholder.typicode.com/users/")
-        .then((response) => response.json())
-        .then((users) => setUser(users));
-    }, []);
-
+    const {data: users} = useFetch(USER_URL)
     return users
 }
