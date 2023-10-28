@@ -1,14 +1,8 @@
 import "./App.css";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useUsers } from "./hooks/useUsers";
 
 function App() {
-  const [users, setUser] = useState([]);
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users/")
-      .then((response) => response.json())
-      .then((users) => setUser(users));
-  }, []);
+  const users = useUsers();
   return (
     <div className="layout">
       <header>
