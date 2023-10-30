@@ -1,5 +1,6 @@
 import { useUserInfo } from "../../hooks/useUserInfo";
 import { Album } from "./Albums";
+import { Todos } from "./Todos";
 import { Information } from "./Information";
 
 export const UserInfo = ({ userId }) => {
@@ -11,6 +12,7 @@ export const UserInfo = ({ userId }) => {
         <div>
           <Information userInfo={userInfo} />
           <Album userId={userInfo.id} />
+          <Todos userId={userInfo.id} />
         </div>
       ) : (
         <p>loading</p>
