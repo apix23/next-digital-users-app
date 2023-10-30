@@ -24,13 +24,12 @@ header {grid-area: header;}
 main { 
   grid-area: main;
   display: flex;
+  gap: 15px;
   justify-content: center;
 }
 
 .users-container{
   max-width: 1300px;
-  min-width: 700px;
-
 }
 .users-container > article{
   margin: 0 10px;

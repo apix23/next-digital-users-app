@@ -1,0 +1,5 @@
+aside{
+    display: flex;
+    gap: 15px;
+    text-align: start;
+}
