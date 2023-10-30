@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import { useUsers } from "./hooks/useUsers";
-import { UserInfo } from "./UserInfo";
+import { UserInfo } from "./components/userInformation/UserInfo";
 
 function App() {
   const users = useUsers();
